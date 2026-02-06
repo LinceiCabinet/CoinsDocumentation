@@ -3228,27 +3228,55 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
-		#wrapper > .bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #1F3A2E;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
-			z-index: -1;
-		}
-
-			#wrapper > .bg.fixed {
-				position: fixed;
-				width: 100vw;
-				height: 100vh;
+					#wrapper > .bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			
+				/* Base color */
+				background-color: #1F3A2E;
+			
+				/* Layered sfumatura */
+				background-image:
+					url("../../images/overlay.png"),
+					linear-gradient(
+						180deg,
+						rgba(31, 58, 46, 0.85),
+						rgba(20, 30, 26, 0.95)
+					),
+					url("../../images/bg.jpg");
+			
+				background-size:
+					auto,
+					100% 100%,
+					100% auto;
+			
+				background-position:
+					center,
+					center,
+					top center;
+			
+				background-repeat:
+					repeat,
+					no-repeat,
+					no-repeat;
+			
+				background-attachment:
+					scroll,
+					scroll,
+					scroll;
+			
+				background-blend-mode:
+					overlay,
+					multiply,
+					normal;
+			
+				z-index: -1;
 			}
 
+			
 		#wrapper.fade-in:before {
 			pointer-events: none;
 			-moz-transition: opacity 1s ease-in-out;
@@ -4688,5 +4716,6 @@ input, select, textarea {
 		}
 
 	}
+
 
 
