@@ -3218,64 +3218,53 @@ input, select, textarea {
 
 /* Wrapper */
 
-	#wrapper {
-		-moz-transition: opacity 0.5s ease;
-		-webkit-transition: opacity 0.5s ease;
-		-ms-transition: opacity 0.5s ease;
-		transition: opacity 0.5s ease;
-		position: relative;
-		z-index: 1;
-		overflow: hidden;
-	}
-
-					#wrapper > .bg {
+				#wrapper {
+					-moz-transition: opacity 0.5s ease;
+					-webkit-transition: opacity 0.5s ease;
+					-ms-transition: opacity 0.5s ease;
+					transition: opacity 0.5s ease;
+					position: relative;
+					z-index: 1;
+					overflow: hidden;
+				}
+			
+								#wrapper > .bg {
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
 			
-				/* Base color */
+				/* TRUE base color */
 				background-color: #1F3A2E;
 			
-				/* Layered sfumatura */
+				/* Green sfumatura */
 				background-image:
 					url("../../images/overlay.png"),
 					linear-gradient(
 						180deg,
-						rgba(31, 58, 46, 0.85),
-						rgba(20, 30, 26, 0.95)
-					),
-					url("../../images/bg.jpg");
+						rgba(31, 58, 46, 0.95),
+						rgba(18, 26, 22, 1)
+					);
 			
 				background-size:
 					auto,
-					100% 100%,
-					100% auto;
+					100% 100%;
 			
 				background-position:
 					center,
-					center,
-					top center;
+					center;
 			
 				background-repeat:
 					repeat,
-					no-repeat,
 					no-repeat;
 			
 				background-attachment:
 					scroll,
-					scroll,
 					scroll;
-			
-				background-blend-mode:
-					overlay,
-					multiply,
-					normal;
 			
 				z-index: -1;
 			}
-
 			
 		#wrapper.fade-in:before {
 			pointer-events: none;
@@ -4716,6 +4705,7 @@ input, select, textarea {
 		}
 
 	}
+
 
 
 
